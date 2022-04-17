@@ -44,6 +44,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func show_image_zoom(_ sender: Any) {
+        // zoom中は自動再生を停止
+        if flg_play == 1 {
+            self.timer.invalidate()
+            self.timer = nil
+            flg_play = 0
+        }
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {

@@ -119,7 +119,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="戻る"/>
                                 <connections>
-                                    <segue destination="M0K-dv-FRb" kind="unwind" unwindAction="unwind:" id="XLY-qV-C7U"/>
+                                    <segue destination="M0K-dv-FRb" kind="unwind" unwindAction="unwind:" id="ldH-QR-llG"/>
                                 </connections>
                             </button>
                         </subviews>
