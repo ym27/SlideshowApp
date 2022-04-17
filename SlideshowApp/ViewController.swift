@@ -8,6 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var show_image: UIImageView!
     
     @IBAction func forward(_ sender: Any) {
@@ -40,6 +41,12 @@ class ViewController: UIViewController {
             flg_play = 0
         }
         
+    }
+    
+    @IBAction func show_image_zoom(_ sender: Any) {
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
     }
     
     // 初期設定（画像ID）
@@ -80,6 +87,11 @@ class ViewController: UIViewController {
         // 画像表示（list_imagesの先頭画像が表示）
         let image = UIImage(named: self.list_images[0])
         show_image.image = image
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultViewController:ResultViewController = segue.destination as! ResultViewController
+        resultViewController.image = UIImage(named: self.list_images[self.image_id])
     }
     
 
